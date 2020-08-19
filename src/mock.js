@@ -34,11 +34,11 @@ const getRandomRepeatingDays = () => {
   return repeatingDays;
 };
 
-const getDescription = () => {
+const getRandomDescription = () => {
   return descriptions[getRandomNumber(descriptions.length)];
 };
 
-const getColor = () => {
+const getRandomColor = () => {
   return colors[getRandomNumber(colors.length)];
 };
 
