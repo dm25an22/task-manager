@@ -1,6 +1,7 @@
-const COUNT = 2;
+const COUNT = 10;
 
 const weekDays = [`mo`, `tu`, `we`, `th`, `fr`, `sa`, `su`];
+
 const descriptions = [
   `Изучить теорию`,
   `Сделать домашку`,
@@ -42,8 +43,9 @@ const getRandomColor = () => {
   return colors[getRandomNumber(colors.length)];
 };
 
-const createData = () => {
+const createData = (id) => {
   return {
+    id,
     description: getRandomDescription(),
     dueDate: getRandomDate(),
     repeatingDays: getRandomRepeatingDays(),
@@ -54,7 +56,8 @@ const createData = () => {
 };
 
 const createMock = (count) => {
-  return new Array(count).fill().map(createData);
+  let id = 0;
+  return new Array(count).fill().map(() => createData(id++));
 };
 
 const mockTask = createMock(COUNT);

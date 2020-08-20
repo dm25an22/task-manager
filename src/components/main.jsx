@@ -112,7 +112,9 @@ const Main = ({tasks}) => {
           </a>
         </div>
         <div className="board__tasks">
-          <TaskCard task={tasks[0]}/>
+          {tasks.map((task) => {
+            return <TaskCard key={task.id} task={task}/>
+          })}
         </div>
         <button className="load-more" type="button">
           load more

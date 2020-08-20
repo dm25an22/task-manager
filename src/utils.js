@@ -4,9 +4,6 @@ const getFormatDate = (date) => {
   const month = months[date.getMonth()];
   const day = date.getDate();
 
-  console.log(date);
-  console.log(date.getMonth());
-
   return `${day} ${month}`;
 };
 
