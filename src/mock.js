@@ -44,10 +44,10 @@ const getRandomColor = () => {
 
 const createData = () => {
   return {
-    description: getDescription(),
+    description: getRandomDescription(),
     dueDate: getRandomDate(),
     repeatingDays: getRandomRepeatingDays(),
-    color: getColor(),
+    color: getRandomColor(),
     isFavourite: getRandomBoolean(),
     isArchive: getRandomBoolean(),
   };
@@ -57,4 +57,6 @@ const createMock = (count) => {
   return new Array(count).fill().map(createData);
 };
 
-const mock = createMock(COUNT);
+const mockTask = createMock(COUNT);
+
+export {mockTask};
