@@ -1,0 +1,4 @@
+{
+  "port": 5000,
+  "mongoUrl": "mongodb+srv://daniel:a9wi6jOV11i0BOR8@cluster0.cvs83.azure.mongodb.net/task_manager"
+}

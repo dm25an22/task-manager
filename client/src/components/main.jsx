@@ -1,7 +1,6 @@
 import React from "react";
-import TaskCard from "./task-card";
 
-const Main = ({tasks}) => {
+const Main = () => {
   return (
     <main className="main">
       <section className="main__control control container">
@@ -112,9 +111,53 @@ const Main = ({tasks}) => {
           </a>
         </div>
         <div className="board__tasks">
-          {tasks.map((task) => {
-            return <TaskCard key={task.id} task={task}/>
-          })}
+          <article className={`card card--blue`}>
+            <div className="card__form">
+              <div className="card__inner">
+                <div className="card__control">
+                  <button type="button" className="card__btn card__btn--edit">
+                    edit
+                  </button>
+                  <button
+                    type="button"
+                    className="card__btn card__btn--archive"
+                  >
+                    archive
+                  </button>
+                  <button
+                    type="button"
+                    className="card__btn card__btn--favorites card__btn--disabled"
+                  >
+                    favorites
+                  </button>
+                </div>
+                <div className="card__color-bar">
+                  <svg
+                    className="card__color-bar-wave"
+                    width="100%"
+                    height={10}
+                  >
+                    <use xlinkHref="#wave" />
+                  </svg>
+                </div>
+                <div className="card__textarea-wrap">
+                  <p className="card__text">It is example of repeating task. It marks by wave</p>
+                </div>
+                <div className="card__settings">
+                  <div className="card__details">
+                    <div className="card__dates">
+                      <div className="card__date-deadline">
+                        <p className="card__input-deadline-wrap">
+                          <span className="card__date">23 September</span>
+                          <span className="card__time">16:15</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
         <button className="load-more" type="button">
           load more
